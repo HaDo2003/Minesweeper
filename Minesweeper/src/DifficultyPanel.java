@@ -1,6 +1,11 @@
+/*  Name: Hà Đỗ Tây Đô
+    ID: ITITIU21177
+    Purpose: This panel provides the user with options to choose 
+    the difficulty level of the Minesweeper game. 
+    The options include "Easy", "Medium", and "Hard".
+*/
 
 import javax.swing.*;
-
 import java.awt.BorderLayout;
 import java.awt.Font;
 import java.awt.GridLayout;

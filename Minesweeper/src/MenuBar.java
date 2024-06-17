@@ -1,6 +1,13 @@
+/*  Name: Hà Đỗ Tây Đô
+    ID: ITITIU21177
+    Purpose: The MenuBar class extends JMenuBar and serves as the menu bar 
+    for the Minesweeper game. It provides a set of menu items that enable 
+    players to manage their game sessions, including starting new games, 
+    changing difficulty levels, restarting the game, and exiting the application.
+*/
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
@@ -91,7 +98,4 @@ public class MenuBar extends JMenuBar{
     public void setMinesweeperGame(MinesweeperGame minesweeperGame) {
         this.minesweeperGame = minesweeperGame;
     }
-
-    
 }
-

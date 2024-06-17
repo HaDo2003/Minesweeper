@@ -1,3 +1,8 @@
+/*  Name: Hà Đỗ Tây Đô
+    ID: ITITIU21177
+    Purpose: Manage and display the game's leaderboard 
+*/
+
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;

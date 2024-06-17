@@ -1,3 +1,11 @@
+/*  Name: Hà Đỗ Tây Đô
+    ID: ITITIU21177
+    Purpose: The MinesweeperGame class manages the state and behavior 
+    of the Minesweeper game. It handles the setup of the game board, 
+    manages user interactions, and implements the game logic such as 
+    revealing tiles, counting mines, and managing game state transitions 
+    like win and game over conditions.
+*/
 
 import java.awt.*;
 import java.awt.event.*;
@@ -362,5 +370,4 @@ public class MinesweeperGame{
                 break;
         }
     }
-
 }

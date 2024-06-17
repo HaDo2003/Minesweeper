@@ -1,3 +1,10 @@
+/*  Name: Hà Đỗ Tây Đô
+    ID: ITITIU21177
+    Purpose: The hint class extends JButton, representing a button that players can click 
+    to receive hints in the game. The purpose of this class is to assist players by revealing 
+    a hint when they are stuck or unsure of their next move.
+*/
+
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Image;
@@ -72,5 +79,3 @@ public class hint extends JButton{
         }
     } 
 }
-
-

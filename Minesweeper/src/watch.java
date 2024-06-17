@@ -1,3 +1,12 @@
+/*  Name: Hà Đỗ Tây Đô
+    ID: ITITIU21177
+    Purpose: The watch class provides a mechanism to track the time 
+    taken by a player to complete a game of Minesweeper. It displays 
+    the elapsed time in a format of hours, minutes, and seconds, and 
+    it controls the start, stop, and reset functionality of the timer. 
+    This timekeeping feature enhances the game by allowing players to 
+    gauge their performance and compare their times with others on leaderboards.
+*/
 
 import java.awt.*;
 import javax.swing.*;
@@ -71,7 +80,5 @@ public class watch extends JLabel{
 
     public void setMinesweeperGame(MinesweeperGame minesweeperGame) {
         this.minesweeperGame = minesweeperGame;
-    }
-
-    
+    }   
 }

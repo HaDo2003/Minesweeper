@@ -1,3 +1,8 @@
+/*  Name: Hà Đỗ Tây Đô
+    ID: ITITIU21177
+    Purpose: Set up and launch a Minesweeper game application 
+    using Java's Swing framework for the graphical user interface
+*/
 
 import javax.swing.*;
 

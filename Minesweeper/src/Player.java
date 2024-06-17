@@ -1,3 +1,12 @@
+/*  Name: Hà Đỗ Tây Đô
+    ID: ITITIU21177
+    Purpose: The Player class is designed to represent a 
+    player in the Minesweeper game. It stores the player's 
+    name and the time taken to complete the game. This 
+    information is essential for maintaining a record of 
+    scores and times, which can be displayed on leaderboards.
+*/
+
 import java.io.Serializable;
 
 public class Player implements Serializable{
