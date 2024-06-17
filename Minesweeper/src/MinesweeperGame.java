@@ -289,12 +289,23 @@ public class MinesweeperGame{
     }
 
     void resetGame() {
-
         firstClick = true;
         gameOver = false;
         tilesClicked = 0;
         tiWatch.reset();
         textLabel.setText("Minesweeper: " + Integer.toString(mineCount));
+        
+        switch (mineCount) {
+            case 5:
+                hintcount = 1;
+                break;
+            case 20:
+                hintcount = 3;
+                break;
+            case 75:
+                hintcount = 5;
+                break;
+        }
 
         for (int r = 0; r < numRows; r++) {
             for (int c = 0; c < numCols; c++) {
