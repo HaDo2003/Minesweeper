@@ -15,29 +15,28 @@ import javax.swing.*;
 
 public class MinesweeperGame{
 
-    Random random = new Random();
-    JFrame frame = new JFrame("Minesweeper");
-    JLabel textLabel = new JLabel();
-    JPanel textPanel = new JPanel();
-    JPanel boardPanel = new JPanel();
-    JPanel controlPanel = new JPanel();
+    private Random random = new Random();
+    public JFrame frame = new JFrame("Minesweeper");
+    private JLabel textLabel = new JLabel();
+    private JPanel textPanel = new JPanel();
+    private JPanel boardPanel = new JPanel();
+    private JPanel controlPanel = new JPanel();
     
-    int numRows;
-    int numCols;
-    int minesRemaining;
-    int hintcount;
-    int mineCount;
-    MineTile[][] board;
-    ArrayList<MineTile> mineList;
-    int tilesClicked = 0;
-    boolean gameOver = false;
-    boolean firstClick = true;
-    int count;
+    public int numRows;
+    public int numCols;
+    public int minesRemaining;
+    public int hintcount;
+    public int mineCount;
+    public MineTile[][] board;
+    public ArrayList<MineTile> mineList;
+    public int tilesClicked = 0;
+    public boolean gameOver = false;
+    public boolean firstClick = true;
 
-    MenuBar menubar;
-    watch tiWatch;
-    LeaderBoard lb;
-    hint hint;
+    private MenuBar menubar;
+    private watch tiWatch;
+    private LeaderBoard lb;
+    private hint hint;
 
 
     MinesweeperGame(int numRows, int numCols, int mineCount, int hintcount) {
@@ -45,7 +44,6 @@ public class MinesweeperGame{
         this.numCols = numCols;
         this.mineCount = mineCount;
         this.hintcount = hintcount;
-        count = 0;
         board = new MineTile[numRows][numCols];
 
         if(numRows == 20 && numCols == 20){
@@ -53,7 +51,7 @@ public class MinesweeperGame{
         }else if(numRows == 10 && numCols == 10){
             frame.setSize(400, 400);
         }else{
-            frame.setSize(300, 300);
+            frame.setSize(350, 350);
         }
         
         frame.setLocationRelativeTo(null);
@@ -79,8 +77,6 @@ public class MinesweeperGame{
         controlPanel.setLayout(new BorderLayout());
         controlPanel.add(textPanel, BorderLayout.WEST);
         controlPanel.add(tiWatch, BorderLayout.EAST);
-
-        
 
         for (int r = 0; r < numRows; r++) {
             for (int c = 0; c < numCols; c++) {

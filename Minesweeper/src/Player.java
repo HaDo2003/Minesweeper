@@ -12,6 +12,7 @@ import java.io.Serializable;
 public class Player implements Serializable{
     private String name;
     private String time;
+    
     public Player(String name, String time) {
         this.name = name;
         this.time = time;

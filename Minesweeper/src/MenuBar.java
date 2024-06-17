@@ -14,19 +14,20 @@ import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 
 public class MenuBar extends JMenuBar{
-    private MinesweeperGame minesweeperGame;
+    private MinesweeperGame mg;
     private JMenu menu;
 
-    public MenuBar(MinesweeperGame minesweeperGame){
-        this.minesweeperGame = minesweeperGame;
+    private JMenuItem newgame = new JMenuItem("New Game");
+    private JMenuItem easy = new JMenuItem("Easy");
+    private JMenuItem med = new JMenuItem("Medium");
+    private JMenuItem hard = new JMenuItem("Hard");
+    private JMenuItem exit = new JMenuItem("Exit");
+
+    public MenuBar(MinesweeperGame mg){
+        this.mg = mg;
 
         menu = new JMenu("Menu");
-        JMenuItem newgame = new JMenuItem("New Game");
-        JMenuItem easy = new JMenuItem("Easy");
-        JMenuItem med = new JMenuItem("Medium");
-        JMenuItem hard = new JMenuItem("Hard");
-        JMenuItem exit = new JMenuItem("Exit");
-
+        
         newgame.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -43,7 +44,7 @@ public class MenuBar extends JMenuBar{
                     options[0]
                 );
                 if(choice == JOptionPane.YES_OPTION){
-                    minesweeperGame.resetGame();
+                    mg.resetGame();
                 }
             }
         });
@@ -52,7 +53,7 @@ public class MenuBar extends JMenuBar{
             @Override
             public void actionPerformed(ActionEvent e) {
                 new MinesweeperGame(5, 5, 5, 1);
-                minesweeperGame.frame.dispose();
+                mg.frame.dispose();
             }
         });
 
@@ -60,7 +61,7 @@ public class MenuBar extends JMenuBar{
             @Override
             public void actionPerformed(ActionEvent e) {
                 new MinesweeperGame(10, 10, 40, 3);
-                minesweeperGame.frame.dispose();
+                mg.frame.dispose();
             }
         });
 
@@ -68,7 +69,7 @@ public class MenuBar extends JMenuBar{
             @Override
             public void actionPerformed(ActionEvent e) {
                 new MinesweeperGame(20, 20, 100, 5);
-                minesweeperGame.frame.dispose();
+                mg.frame.dispose();
             }
         });
 
@@ -76,7 +77,7 @@ public class MenuBar extends JMenuBar{
             @Override
             public void actionPerformed(ActionEvent e) {
                 new Launcher();
-                minesweeperGame.frame.dispose();
+                mg.frame.dispose();
             }
         });
 
@@ -92,10 +93,10 @@ public class MenuBar extends JMenuBar{
     }
 
     public MinesweeperGame getMinesweeperGame() {
-        return minesweeperGame;
+        return mg;
     }
 
-    public void setMinesweeperGame(MinesweeperGame minesweeperGame) {
-        this.minesweeperGame = minesweeperGame;
+    public void setMinesweeperGame(MinesweeperGame mg) {
+        this.mg = mg;
     }
 }

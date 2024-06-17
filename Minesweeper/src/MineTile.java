@@ -9,8 +9,8 @@
 import javax.swing.JButton;
 
 public class MineTile extends JButton{
-    int r;
-    int c;
+    public int r;
+    public int c;
 
     public MineTile(int r, int c) {
         this.r = r;

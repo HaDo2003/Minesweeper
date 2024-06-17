@@ -14,30 +14,30 @@ import java.awt.event.ActionListener;
 
 public class DifficultyPanel extends JPanel {
     private JPanel cardPanel;
+    private JPanel panel_level = new JPanel();
+    private JPanel panel_option = new JPanel();
+    private Font font = new Font("Arial", Font.BOLD, 20);
+    
+    private JLabel choice = new JLabel("Choose Level");
+    private JButton easyButton = new JButton("Easy");
+    private JButton medButton = new JButton("Medium");
+    private JButton hardButton = new JButton("Hard");
+    private JButton backlauncher = new JButton("Back to menu");
 
     public DifficultyPanel(JPanel cardPanel) {
         this.cardPanel = cardPanel;
         setLayout(new BorderLayout());
 
-        Font font = new Font("Arial", Font.BOLD, 20);
-        JLabel choice = new JLabel("Choose Level");
         choice.setFont(font);
         choice.setHorizontalAlignment(SwingConstants.CENTER);
         choice.setBackground(null);
         choice.setOpaque(false);
 
-        JPanel panel_level = new JPanel();
-        JPanel panel_option = new JPanel();
         panel_level.setLayout(new GridLayout(3, 1, 8, 8));
         panel_level.setBackground(null);
         panel_level.setOpaque(false);
         panel_option.setBackground(null);
         panel_option.setOpaque(false);
-
-        JButton easyButton = new JButton("Easy");
-        JButton medButton = new JButton("Medium");
-        JButton hardButton = new JButton("Hard");
-        JButton backlauncher = new JButton("Back to menu");
 
         choice.setBorder(BorderFactory.createEmptyBorder(10, 0, 10, 0));
 

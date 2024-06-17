@@ -20,17 +20,23 @@ import javax.swing.JOptionPane;
 import javax.swing.Timer;
 
 public class hint extends JButton{
-    MinesweeperGame mg;
+    private MinesweeperGame mg;
+    private URL urlHint;
+    private Image img;
+    private Image scaledImg ;
+    private ImageIcon icon;
+    private Dimension size ;
 
     public hint(MinesweeperGame mg){
         this.mg = mg;
 
-        URL urlHint = hint.class.getResource("/img/hint.png");
-        Image img = Toolkit.getDefaultToolkit().createImage(urlHint);
-        Image scaledImg = img.getScaledInstance(32, 32, Image.SCALE_SMOOTH);
-        ImageIcon icon = new ImageIcon(scaledImg);
+        urlHint = hint.class.getResource("/img/hint.png");
+        img = Toolkit.getDefaultToolkit().createImage(urlHint);
+        scaledImg = img.getScaledInstance(32, 32, Image.SCALE_SMOOTH);
+        icon = new ImageIcon(scaledImg);
+        size = new Dimension(32, 32);
+
         this.setIcon(icon);
-        Dimension size = new Dimension(32, 32);
         this.setPreferredSize(size);
         this.setMinimumSize(size);
         this.setMaximumSize(size);

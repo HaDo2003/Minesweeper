@@ -14,28 +14,35 @@ import java.net.URL;
 public class Launcher {
     private static final String START_PANEL = "start";
     private static final String DIFFICULTY_PANEL = "difficulty";
-    MinesweeperGame mg;
-    LeaderBoard lb;
+
+    private LeaderBoard lb;
+
+    private JFrame mainFrame;
+    private URL imageURL;
+    private ImageIcon backgroundImage;
+    private JLabel backgroundLabel;
+    private JPanel cardPanel;
+    private JButton startButton = new JButton("Start Game");
+    private JButton exButton = new JButton("Exit Game");
+    private JButton LBButton = new JButton("Leader Board");
+    private JPanel startPanel;
+    private GridBagConstraints gbc = new GridBagConstraints();
 
     public Launcher() {
         lb = new LeaderBoard();
 
         SwingUtilities.invokeLater(() -> {
-            JFrame mainFrame = new JFrame("Minesweeper");
+            mainFrame = new JFrame("Minesweeper");
 
             // Load background image
-            URL imageURL = Launcher.class.getResource("img/background.jpg");
-            ImageIcon backgroundImage = new ImageIcon(imageURL);
+            imageURL = Launcher.class.getResource("img/background.jpg");
+            backgroundImage = new ImageIcon(imageURL);
 
             // Create a JLabel with the background image
-            JLabel backgroundLabel = new JLabel(backgroundImage);
+            backgroundLabel = new JLabel(backgroundImage);
             backgroundLabel.setLayout(new BorderLayout());
 
-            JPanel cardPanel = new JPanel(new CardLayout());
-
-            JButton startButton = new JButton("Start Game");
-            JButton exButton = new JButton("Exit Game");
-            JButton LBButton = new JButton("Leader Board");
+            cardPanel = new JPanel(new CardLayout());
 
             startButton.setPreferredSize(new Dimension(200, 60));
             exButton.setPreferredSize(new Dimension(200, 60));
@@ -77,7 +84,7 @@ public class Launcher {
                 }
             });
 
-            JPanel startPanel = new JPanel();
+            startPanel = new JPanel();
             startPanel.setLayout(new BorderLayout(10, 10));
             startPanel.add(startButton, BorderLayout.NORTH);
             startPanel.add(LBButton, BorderLayout.CENTER);
@@ -93,7 +100,6 @@ public class Launcher {
 
             // Set the layout for the background label
             backgroundLabel.setLayout(new GridBagLayout());
-            GridBagConstraints gbc = new GridBagConstraints();
             gbc.gridx = 0;
             gbc.gridy = 0;
             backgroundLabel.add(cardPanel, gbc);

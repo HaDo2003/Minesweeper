@@ -14,15 +14,14 @@ import javax.swing.*;
 import java.awt.event.*;
 
 public class watch extends JLabel{
-    private MinesweeperGame minesweeperGame;
-    int elapsedTime = 0;
-    int second = 0;
-    int minute = 0;
-    int hour = 0;
-    boolean started = false;
-    String second_string = String.format("%02d", second);
-    String minute_string = String.format("%02d", minute);
-    String hour_string = String.format("%02d", hour);
+    private MinesweeperGame mg;
+    private int elapsedTime = 0;
+    private int second = 0;
+    private int minute = 0;
+    private int hour = 0;
+    private String second_string = String.format("%02d", second);
+    private String minute_string = String.format("%02d", minute);
+    private String hour_string = String.format("%02d", hour);
     Timer timer = new Timer(1000, new ActionListener() {
         public void actionPerformed(ActionEvent e){
             elapsedTime += 1000;
@@ -37,8 +36,8 @@ public class watch extends JLabel{
     });
 
 
-    public watch(MinesweeperGame minesweeperGame){
-        this.minesweeperGame = minesweeperGame;
+    public watch(MinesweeperGame mg){
+        this.mg = mg;
 
         this.setText(hour_string+":"+minute_string+":"+second_string);
         this.setBounds(50,50,10,10);
@@ -75,10 +74,10 @@ public class watch extends JLabel{
     }
 
     public MinesweeperGame getMinesweeperGame() {
-        return minesweeperGame;
+        return mg;
     }
 
-    public void setMinesweeperGame(MinesweeperGame minesweeperGame) {
-        this.minesweeperGame = minesweeperGame;
+    public void setMinesweeperGame(MinesweeperGame mg) {
+        this.mg = mg;
     }   
 }

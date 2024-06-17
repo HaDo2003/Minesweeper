@@ -27,7 +27,13 @@ public class LeaderBoard {
     private JTable table;
     private DefaultTableModel tableModel;
     private JFrame frame;
-    private static final int MAX_ROWS = 5; // Maximum number of rows to display
+    private static final int MAX_ROWS = 5;
+
+    private JButton easy = new JButton("Easy");
+    private JButton med = new JButton("Medium");
+    private JButton hard = new JButton("Hard");
+    private JButton del = new JButton("delete");
+    private JPanel panel = new JPanel();
 
     public LeaderBoard() {
         players = new ArrayList<>();
@@ -40,12 +46,6 @@ public class LeaderBoard {
         frame.setLocationRelativeTo(null);
         frame.setLayout(new BorderLayout());
         frame.setResizable(false);
-
-        JButton easy = new JButton("Easy");
-        JButton med = new JButton("Medium");
-        JButton hard = new JButton("Hard");
-        JButton del = new JButton("delete");
-        JPanel panel = new JPanel();
 
         panel.setLayout(new GridLayout(1, 3, 5, 5));
         panel.add(easy);
