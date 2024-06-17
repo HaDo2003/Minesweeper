@@ -71,13 +71,5 @@ public class watch extends JLabel{
     String getTime(){
         timer.stop();
         return hour_string + ":" + minute_string + ":" + second_string;
-    }
-
-    public MinesweeperGame getMinesweeperGame() {
-        return mg;
-    }
-
-    public void setMinesweeperGame(MinesweeperGame mg) {
-        this.mg = mg;
-    }   
+    } 
 }

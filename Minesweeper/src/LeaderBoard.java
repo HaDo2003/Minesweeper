@@ -186,12 +186,4 @@ public class LeaderBoard {
     public void showLeaderBoard() {
         frame.setVisible(true);
     }
-    public void deletePlayer(String name) {
-        Player player = findPlayerByName(name);
-        if (player != null) {
-            players.remove(player);
-            sortLeaderboard();
-            updateTable();
-        }
-    }
 }

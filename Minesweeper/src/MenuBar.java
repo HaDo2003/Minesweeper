@@ -91,12 +91,4 @@ public class MenuBar extends JMenuBar{
 
         this.add(menu);
     }
-
-    public MinesweeperGame getMinesweeperGame() {
-        return mg;
-    }
-
-    public void setMinesweeperGame(MinesweeperGame mg) {
-        this.mg = mg;
-    }
 }
