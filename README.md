@@ -34,7 +34,7 @@ This command compiles all Java files in the `src` directory and places the compi
 1. After compiling, run the Minesweeper application using the following command:
    java -cp bin Minesweeper
 - `-cp bin` specifies the classpath where the compiled classes are located.
-- `Minesweeper` is the main class to start the game.
+- `MineApp` is the main class to start the game.
 
 2. If there are additional libraries or dependencies, include them in the classpath:
    java -cp "bin
