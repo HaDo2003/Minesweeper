@@ -16,6 +16,7 @@ import javax.swing.*;
 public class MinesweeperGame{
 
     private Random random = new Random();
+
     public JFrame frame = new JFrame("Minesweeper");
     private JLabel textLabel = new JLabel();
     private JPanel textPanel = new JPanel();
@@ -39,7 +40,7 @@ public class MinesweeperGame{
     private hint hint;
 
 
-    MinesweeperGame(int numRows, int numCols, int mineCount, int hintcount) {
+    public MinesweeperGame(int numRows, int numCols, int mineCount, int hintcount) {
         this.numRows = numRows;
         this.numCols = numCols;
         this.mineCount = mineCount;
