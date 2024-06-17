@@ -47,13 +47,13 @@ public class LeaderBoard {
         panel.add(med);
         panel.add(hard);
 
-        loadFromFile("leaderboardes.dat");
+        loadFromFile("File/leaderboardes.dat");
         printLeaderboard();
 
         easy.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                loadFromFile("leaderboardes.dat");
+                loadFromFile("File/leaderboardes.dat");
                 printLeaderboard();
             }
         });
@@ -61,7 +61,7 @@ public class LeaderBoard {
         med.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                loadFromFile("leaderboardme.dat");
+                loadFromFile("File/leaderboardme.dat");
                 printLeaderboard();
             }
         });
@@ -69,7 +69,7 @@ public class LeaderBoard {
         hard.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                loadFromFile("leaderboardha.dat");
+                loadFromFile("File/leaderboardha.dat");
                 printLeaderboard();
             }
         });

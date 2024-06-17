@@ -346,19 +346,19 @@ public class MinesweeperGame{
 
         switch (mineCount) {
             case 5:
-                lb.loadFromFile("leaderboardes.dat");
+                lb.loadFromFile("File/leaderboardes.dat");
                 lb.addPlayer(name, time);
-                lb.saveToFile("leaderboardes.dat");
+                lb.saveToFile("File/leaderboardes.dat");
                 break;
             case 20:
-                lb.loadFromFile("leaderboardme.dat");
+                lb.loadFromFile("File/leaderboardme.dat");
                 lb.addPlayer(name, time);
-                lb.saveToFile("leaderboardme.dat");
+                lb.saveToFile("File/leaderboardme.dat");
                 break;
             case 75:
-                lb.loadFromFile("leaderboardha.dat");
+                lb.loadFromFile("File/leaderboardha.dat");
                 lb.addPlayer(name, time);
-                lb.saveToFile("leaderboardha.dat");
+                lb.saveToFile("File/leaderboardha.dat");
                 break;
         }
     }
