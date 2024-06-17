@@ -18,5 +18,5 @@ Before you begin, ensure you have met the following requirements:
 ## Cloning the Repository
 
 1. Clone this repository to your local machine using Git. Open a terminal and run:
-  [ https://github.com/HaDo2003/Minesweeper](url)
+  [[ https://github.com/HaDo2003/Minesweeper](url)](https://github.com/HaDo2003/Minesweeper.git)
 2. 
