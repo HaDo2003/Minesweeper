@@ -15,7 +15,6 @@ import java.util.List;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
@@ -32,7 +31,6 @@ public class LeaderBoard {
     private JButton easy = new JButton("Easy");
     private JButton med = new JButton("Medium");
     private JButton hard = new JButton("Hard");
-    private JButton del = new JButton("delete");
     private JPanel panel = new JPanel();
 
     public LeaderBoard() {
@@ -79,21 +77,8 @@ public class LeaderBoard {
             }
         });
 
-        del.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                String name = JOptionPane.showInputDialog(frame, "Enter player name to delete:");
-                if (name != null && !name.trim().isEmpty()) {
-                    deletePlayer(name);
-                    updateTable();
-                    saveToFile("leaderboardha.dat");
-                }
-            }
-        });
-
         frame.add(panel, BorderLayout.NORTH);
         frame.add(new JScrollPane(table), BorderLayout.CENTER);
-        // frame.add(del, BorderLayout.SOUTH);
     }
 
     public void addPlayer(String name, String time) {
