@@ -49,10 +49,8 @@ public class MinesweeperGame{
 
         if(numRows == 20 && numCols == 20){
             frame.setSize(700, 700);
-        }else if(numRows == 10 && numCols == 10){
-            frame.setSize(400, 400);
         }else{
-            frame.setSize(350, 350);
+            frame.setSize(400, 400);
         }
         
         frame.setLocationRelativeTo(null);
